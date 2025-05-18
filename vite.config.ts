@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === 'production') {
 
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     vue(),
     AutoImport({
       imports: [
@@ -30,7 +31,6 @@ export default defineConfig({
     Components({
       dts: 'components.d.ts',
     }),
-    tailwindcss(),
   ],
   resolve: {
     alias: {
